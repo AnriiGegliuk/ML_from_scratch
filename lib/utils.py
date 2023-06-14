@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 
+######## Standarizing data ########
+
 def standarizing(X):
     mean = np.mean(X, axis=0)
     std = np.std(X, axis=0)
@@ -20,3 +22,8 @@ def robust_scaler(X):
     median = np.median(X, axis = 0)
 
     return (X - median) / (q3 - q1)
+
+######## evaluating the performance of a regression model ########
+
+def mean_squared_error(y_true, y_pred):
+    return np.mean((y_true, y_pred) ** 2)
