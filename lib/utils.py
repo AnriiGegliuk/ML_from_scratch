@@ -27,3 +27,7 @@ def robust_scaler(X):
 
 def mean_squared_error(y_true, y_pred):
     return np.mean((y_true, y_pred) ** 2)
+
+def root_mean_squared_error(y_true, y_pred):
+    mse = np.mean((y_true, y_pred) ** 2)
+    return np.sqrt(mse)
